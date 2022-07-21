@@ -1,0 +1,43 @@
+* {
+    Margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+.main-flex {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px;
+    position: relative;
+    top: 10%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+.indexSlide {
+    width: 100%;
+}
+.carousel-item {
+    max-width: 500px;
+    max-height: 600px;
+    padding: 5%;
+}
+.carousel-inner img {
+    margin: auto;
+    width: 100%;
+}
+.cards, #carrito {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 30px;
+    position: relative;
+    top: 5%;
+    height: auto;
+    justify-content: space-around;
+    align-items: center;
+}
+.card {
+    padding: 5px;
+}
+

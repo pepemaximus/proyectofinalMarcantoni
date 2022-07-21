@@ -1,0 +1,6 @@
+[
+{"nombre": "Mario", "apellido": "Gonzalez", "celular": 1560407788, "direccion": "Mexico 3721", "localidad": "CABA", "codigoPostal": 1641,"nombreUsuario": "Mariogonzalez78", "clave": "Mario2022"},
+{"nombre": "Micaela", "apellido": "Soriano", "celular": 1540424545, "direccion": "Charlone 640", "localidad": "CABA", "codigoPostal": 1710, "nombreUsuario": "Micasoriano22", "clave": "Mica2022"},
+{"nombre": "Juliana", "apellido": "Abodya", "celular": 1521851234, "direccion": "Humahuaca 1211", "localidad": "CABA", "codigoPostal": 1520, "nombreUsuario": "Juliana2000", "clave": "Juli1211"},
+{"nombre": "Gustavo", "apellido": "Perez", "celular": 1555409829, "direccion": "Bulnes 1015", "localidad": "CABA", "codigoPostal": 1421, "nombreUsuario": "Gperez15", "clave": "Gusperez2015"}
+]

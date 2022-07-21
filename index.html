@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang=”en”>
+            <head>
+                <meta charset=”UTF-8″>
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+                <title>Watch - Inicio</title>
+                <meta name="description" content="Clock página de inicio, Clock donde comparar el reloj que necesitás">
+                <meta name="keywords"content="Relojes, relojes de muñeca, reloj para mujer, reloj para niño, clock página web">
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+                rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+                <link rel="stylesheet" href="./css/main.css" />
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+                <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+            </head>
+    <body>   
+        <div class="container">
+            <header class="header-flex row">
+                <link rel="shortcut icon" href="./assets/favicon.png">
+                <div class="row">
+                    <div class="col-xl-1 col-lg-1 col-md-6 col-sm-12">
+                        <img id="logo" src="./assets/logo.png">
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12">
+                        <p>
+                            <span id="textoWatch">Watch Argentina</span>                     
+                        </p>
+                            <h3 id="slogan">Encontrá el reloj que buscás</h3>
+                    </div>
+                    <nav class="menu col-xl-7 col-lg-7 col-md-8 col-sm-12">
+                        <button class="button"><span>Relojes</span></button>
+                        <button class="button"><span>Smartwatchs</span></button>
+                        <button class="button"><span>Contacto</span></button>
+                        <button class="button" id = "ingresar"><span>Ingresar</span></button>
+                        <button id="themeSelector"></button>
+                    </nav>
+                    <div class="topnav col-xl-2 col-lg-2 col-md-4 col-sm-12">
+                        <div class = "usuarioLogueado"></div>
+                    </div>
+
+                </div>
+            </header>
+        </div>
+        <main class="main-flex container">
+            <!--carousel-->
+            <div class="indexSlide row col-12">
+                <div id="carouselIndex" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./assets/smartwatch.png" class="d-block w-100" alt="smartwatch">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Smartwath 5000</h5>
+                                <p>Acceso a redes sociales, e-mails, temperatura y presión corporal, y más funciones</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/rolex.png" class="d-block w-100" alt="rolex">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Rolex</h5>
+                                <p>Últimos lanzamientos de la marca número uno</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/modiya.png" class="d-block w-100" alt="modiya">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Modiya</h5>
+                                <p>Excelente relación precio-calidad</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--tarjetas de productos-->
+            <div class="cards container row">
+
+            </div>
+            <div class = "container col-xl-4 col-lg-4 col-md-6 col-sm-12" style="width: 18rem;">
+                <h1 class="text-center textoPrincipal">Nuestros modelos</h1>
+                <div id="filtrarProductos">
+                    <div id="productoFiltrado">
+                        
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="row col-12">
+                        
+                    </div>
+                </div>
+            </div>
+        
+            <div class="container">
+                <div class="row text-center" id="tienda"> 
+        
+                </div>
+            </div>
+            <!--carrito de compras-->
+            <div class = "container col-xl-4 col-lg-4 col-md-6 col-sm-12" style="width: 18rem;">
+                <h1 class="text-center">Carrito de compra</h1>
+                <div class="container row text-center" id="carrito">
+                
+                </div>
+                <div class = iconoCarrito>
+                    <i class="fa fa-shopping-cart" style="font-size:36px"></i> <span id="contadorCarrito">0</span>
+                    <span class='badge badge-warning' id='lblCartCount'>  </span>
+                </div>
+                <div id="total">
+        
+                </div>
+                <div id = "vaciarCarrito">
+                    <div class="row col-12">
+                            <button class="btn btn-danger btnVaciar" onClick="vaciarCarrito">Vaciar Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <!--Contenedor del formulario de logueo-->
+            <div class = "modal-contenedor">
+                <div class = "modal-logueo">
+                    <h2>Loguin de usuarios</h2>
+                    <button id="loguinCerrar"><i class="fas fa-times-circle"></i></button>
+                    <div id="loguin-contenedor">
+                        <div class = formulario row col-12>
+                            <form action="#" method="post" enctype="application/x-www-form-urlencoded">
+                                <div class="formuUsuario">
+                                    <label for="usuario">Nombre de usuario</label><input type="text" name="usuario" id="usuario" placeholder="Ingrese su usuario">
+                                <div class="formuClave">
+                                    <label for="claveUsuario">Elija su clave</label><input type="text" name="claveUsuario" id="claveUsuario" placeholder="Ingrese su clave">
+                                </div>
+                            </form>
+                            <button id="btnEnviar"> <input type="submit" value="Enviar"></button>
+                            <button id="btnLimpiar"><input type="reset" value="Limpiar"> <onclick="limpiarFormulario()"> </button>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </main>
+        <div class="container"> 
+            <div class="row">
+                <div class="final d-flex col-12">
+                    <section id="iconosFinales">
+                        <img src="./assets/email.png">
+                        <img src="./assets/facebook.png">
+                        <img src="./assets/whatsapp.jpg">
+                        <img src="./assets/contacto.png">
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="container">    
+            <footer class="footer-flex d-flex mx-auto row col-xl-6 col-lg-3 col-md-2 col-sm-12">
+                    <p id= "textoFooterIndex"> contacto@watchargentina.com.ar      11-1111-1111            0800-123-4444</p>
+            </footer>
+        </div>
+        <div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+            </script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+            </script>
+            <script>
+                AOS.init();
+            </script>
+            <!--librería Sweet Alert-->
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+            <!--librería Toastify-->
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+            <!--base de datos de productos en archivo Javascript separado simulando que recibí esa base de otro sector-->s
+            <script src="./js/productos.js" defer></script>
+            <!--scripts de JS-->
+            <script src="./js/main.js" defer></script>
+            <!--script para utilización de API de envío de emails (newsletters de mi sitio de ecommerce)-->
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+            <script type="text/javascript">
+                (function(){
+                emailjs.init("48292270");
+                })();
+            </script>
+        </div>
+    </body>
+</html>
